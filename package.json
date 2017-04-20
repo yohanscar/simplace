@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "description": "Encontre as melhores oficinas",
   "main": "index.js",
+  "private": true,
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "jade": "^1.11.0"
+    "body-parser": "~1.17.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "morgan": "^1.8.1",
+    "pug": "^2.0.0-beta9",
+    "serve-favicon": "^2.4.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
