@@ -1,0 +1,24 @@
+{
+  "name": "simplaces",
+  "version": "1.0.0",
+  "description": "Encontre as melhores oficinas",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yohanscar/simplace.git"
+  },
+  "author": "Wagner Yohan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yohanscar/simplace/issues"
+  },
+  "homepage": "https://github.com/yohanscar/simplace#readme"
+}
