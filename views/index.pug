@@ -2,14 +2,12 @@ extends layout
 
 block content
   h1= title
-  p Welcome to sdtsdt #{title}
+  p Bem Vindo a #{title}
   div.top
-    form.form-horizontal(method="post", id="loginForm")
-      label Username
-      input.span3(id="username", type="text", name="User", placeholder="Enter your username")
-      label Password
-      input.span3(id="password", type="password", name="Password")
-      input.btn(type="submit", value="Log In")
+    form.form-horizontal(method="get", id="searchForm", action="/resultado")
+      label CEP
+      input.span3(id="cep", type="text", name="cep", placeholder="0000-000")
+      input.btn(type="submit", value="Pesquisa")
 
     table.table.table-striped
       thead
