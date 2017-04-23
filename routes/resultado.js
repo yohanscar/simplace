@@ -6,32 +6,16 @@ var _cep;
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.send(req.query.cep);
+  res.send(req.query.cep);
+  _cep = req.query.cep;
 
-    places.search({keyword: _cep }, function(err, response) {
-    console.log("search: ", response.results);
-
-    places.details({reference: response.results[0].reference}, function(err, response) {
-      console.log("search details: ", response.result.website);
-      // search details:  http://www.vermonster.com/
-    });
-  });
-});
-
-places.autocomplete({input: 'Verm', types: "(cities)"}, function(err, response) {
+places.autocomplete({input: _cep}, function(err, response) {
   console.log("autocomplete: ", response.predictions);
+  console.log("resposta id>>>",response["id"]);
 
-  var success = function(err, response) {
-    console.log("did you mean: ", response.result.name);
-    // did you mean:  Vermont
-    // did you mean:  Vermont South
-    // did you mean:  Vermilion
-    // did you mean:  Vermillion
-  };
+  car_repair type
+  place_id
 
-  for(var index in response.predictions) {
-    places.details({reference: response.predictions[index].reference}, success);
-  }
 });
-
+});
 module.exports = router;
