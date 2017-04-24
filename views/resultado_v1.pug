@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= title
+  p Bem Vindo a #{title}
+  div.top
+    label #{codigo}
+  div.map
+    h3= My Google Maps Demo
+    script(type='text/javascript').
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+
+  script(type='text/javascript' async, defer, src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDd7DgtR7-kXL33q5NaJBE3fkZDij0jZ7k&callback=initMap').
+  div.container
+    div.content
+  div.footer
