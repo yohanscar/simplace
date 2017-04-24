@@ -34,15 +34,15 @@ GooglePlacesClient.geocode({
                    query: sOficinas + G_endereco // oficinas em <endereco google>
              }, function(err, response) {
                 if (!err) {
-                        console.log(response.json.results[0].formatted_address );  // mostra valores [0].formatted_address)
+                        console.log("results>>>>>" , response.json.results );  // mostra valores [0].formatted_address)
                         console.log(response.json.results[1].formatted_address );
                         aux_endereco = response.json.results[0].formatted_address;
                         aux_place_id = response.json.results[0].place_id
-
+                        
                         places.details({placeid: aux_place_id}, function(err, response) {
                             if(err) { console.log(err); return; }
                              console.log("search details: ", response.result.geometry.location);
-                               res.send("<h1>teste</h1> <h2>teste</h2>");
+                            //   res.send("<h1>teste</h1> <h2>teste</h2>");
                             // res.send(response.result.geometry.location);
                             // res.render('resultado', { title: 'Simplaces | As melhores oficinas' , codigo: _cep  });
                              });
